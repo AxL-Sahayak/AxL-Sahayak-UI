@@ -1,0 +1,71 @@
+{
+    "name": "shayak-teacher-app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+        "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+        "format": "prettier \"**/*.{js,ts,tsx,jsx,json,md}\" --write",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{json,md}": [
+            "prettier --write"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.0",
+        "@hookform/resolvers": "^5.0.1",
+        "@mui/icons-material": "^7.0.2",
+        "@mui/material": "^7.0.2",
+        "@mui/styled-engine-sc": "^7.0.2",
+        "@mui/x-data-grid": "^8.5.1",
+        "@tanstack/react-query": "^5.80.6",
+        "axios": "^1.9.0",
+        "lucide-react": "^0.516.0",
+        "react": "^19.0.0",
+        "react-circular-progressbar": "^2.2.0",
+        "react-dom": "^19.0.0",
+        "react-hook-form": "^7.56.1",
+        "react-router-dom": "^7.5.2",
+        "styled-components": "^6.1.17",
+        "vite-plugin-checker": "^0.9.1",
+        "yup": "^1.6.1"
+    },
+    "devDependencies": {
+        "@eslint/compat": "^1.2.8",
+        "@eslint/js": "^9.25.1",
+        "@types/react": "^19.0.10",
+        "@types/react-dom": "^19.0.4",
+        "@typescript-eslint/eslint-plugin": "^8.31.0",
+        "@typescript-eslint/parser": "^8.31.0",
+        "@vitejs/plugin-react-swc": "^3.8.0",
+        "eslint": "^9.25.1",
+        "eslint-plugin-prettier": "^5.2.6",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-refresh": "^0.4.19",
+        "globals": "^16.0.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.5.2",
+        "prettier": "^3.5.3",
+        "typescript": "~5.7.2",
+        "typescript-eslint": "^8.31.0",
+        "vite": "^6.3.1"
+    }
+}
